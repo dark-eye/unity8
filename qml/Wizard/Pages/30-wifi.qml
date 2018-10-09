@@ -202,6 +202,12 @@ LocalComponents.Page {
         }
     }
 
+    onConnectedChanged: {
+        if( connected && pageStack.currentPage == wifiPage) {
+            pageStack.next();
+        }
+    }
+
     Component {
         id: forwardButton
         LocalComponents.StackButton {
